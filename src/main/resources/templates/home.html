@@ -9,27 +9,24 @@
 </head>
 
 <body class="container pt-5">
-    <div class="mb-3">
-        <label for="exampleFormControlInput1" class="form-label">Nome da tarefa</label>
-        <input type="text" class="form-control" id="exampleFormControlInput1"
-            placeholder="Nome da tarefa a ser executada">
-    </div>
-    <div class="mb-3">
-        <label for="exampleFormControlTextarea1" class="form-label">Descrição</label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-        <a href="#" class="btn btn-primary mt-2">Go somewhere</a>
-
-    </div>
-    <div class="card">
-        <div class="card-header">
-            Featured
+    <form action="/tasks" method="POST">
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Nome da tarefa</label>
+            <input name="name" type="text" class="form-control" id="exampleFormControlInput1"
+                placeholder="Nome da tarefa a ser executada">
         </div>
-        <div class="card-body">
-            <h5 class="card-title">Special title treatment</h5>
-            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Descrição</label>
+            <textarea name="description" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            <button type="submit" class="btn btn-primary mt-2">Go somewhere</button>
+        </div>
+    </form>
+    <div class="card" th:each="task: ${tasks}">
+        <div class="card-header" th:text="${task.name}">
+        </div>
+        <div class="card-body" th:text="${task.description}">
         </div>
     </div>
-    <h1 th:text="${message}"></h1>
 </body>
 
 </html>
