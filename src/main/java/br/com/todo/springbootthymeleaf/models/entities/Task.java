@@ -20,18 +20,15 @@ public class Task {
     private String name;
     @Column(name = "description")
     private String description;
-    @Column(name = "status")
-    private boolean status;
+   
 
     public Task(String name, String description, boolean status) {
         this.name = name;
         this.description = description;
-        this.status = status;
     }
     public Task(String name, String description) {
         this.name = name;
         this.description = description;
-        this.status = false;
     }
 
 }
