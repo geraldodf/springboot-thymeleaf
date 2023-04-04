@@ -14,7 +14,7 @@
                     <h5 th:text="${task.name}"></h5>
                 </div>
                 <div class="col-6 text-end">
-                    <a class="text-decoration-none" th:href="@{'tasks/editar/' + ${task.id}}">
+                    <a class="text-decoration-none" th:href="@{'tasks/edit/' + ${task.id}}">
                         <img class="me-2" src="https://img.icons8.com/ios/50/null/edit-row.png" style="height: 26px;" />
                     </a>
                     <a class="text-decoration-none" th:href="@{'tasks/delete/' + ${task.id}}">

@@ -5,7 +5,7 @@
 </head>
 
 <body>
-    <form class="border border-2 shadow-sm p-3 rounded container mt-5" action="/tasks/salvar" method="POST">
+    <form class="border border-2 shadow-sm p-3 rounded container mt-5" action="/tasks/save" method="POST">
         <h3 class="text-center">Tarefa</h3>
         <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Nome da tarefa</label>
@@ -15,7 +15,7 @@
             <label for="exampleFormControlTextarea1" class="form-label">Descrição</label>
             <textarea name="description" class="form-control" th:field="*{task.description}"
                 id="exampleFormControlTextarea1" rows="3"></textarea>
-            <button type="submit" class="btn btn-primary mt-2">Adicionar Tarefa</button>
+            <button type="submit" class="btn btn-primary mt-2">Enviar</button>
         </div>
         <input type="hidden" id="id" th:field="*{task.id}">
     </form>
